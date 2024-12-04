@@ -22,7 +22,7 @@ export const useBlog = ({ id }: { id: string }) => {
           Authorization: localStorage.getItem("token"),
         },
       })
-      .then((response) => {
+      .then((response: any) => {
         setBlog(response.data.blog);
         setLoading(false);
       });
